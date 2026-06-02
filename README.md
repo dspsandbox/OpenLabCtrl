@@ -42,7 +42,7 @@ Please install the Zynq TCP Control library (TCP-based control utilities for ZYN
 ### This Library
 * Clone the Zynq TCP Control repository:
   ```
-  git clone https://github.com/dspsandbox/openlabctrl/tree/main
+  git clone https://github.com/dspsandbox/OpenLabCtrl/tree/main
   ```
 
 * Navigate to the python lib and install via pip3 (-e for editable install):
@@ -53,7 +53,7 @@ Please install the Zynq TCP Control library (TCP-based control utilities for ZYN
     ```
 
 ## Documentation
-See [Pyhton API Reference](https://dspsandbox.github.io/openlabctrl/) (latest version).
+See [Pyhton API Reference](https://dspsandbox.github.io/OpenLabCtrl/) (latest version).
 
 ## Examples
 |Notebook | Description|

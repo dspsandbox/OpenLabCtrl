@@ -3,7 +3,7 @@ IO
 
 `Link`_ to IOs and pin mapping for Red Pitaya 125-14 devices.
 
-.. _Link: https://github.com/dspsandbox/openlabctrl#ios--pin-mapping
+.. _Link: https://github.com/dspsandbox/OpenLabCtrl#ios--pin-mapping
 
 Base IO
 -------
