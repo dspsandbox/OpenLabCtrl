@@ -17,7 +17,7 @@ Frame Classes
    :undoc-members:
    :inherited-members:
 
-.. autoclass:: openlabctrl.frame.ParametrizedIoSyncFrame
+.. autoclass:: openlabctrl.frame.ParamIoSyncFrame
    :members:
    :undoc-members:
    :inherited-members:

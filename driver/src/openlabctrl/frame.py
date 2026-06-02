@@ -156,10 +156,10 @@ class IoSyncFrame:
 
 
 
-class ParametrizedIoSyncFrame():
+class ParamIoSyncFrame():
     """
-    Parametrized version of :class:`IoSyncFrame`, which builds upon a frame function and a frame parameter set.
-    To reduce overall compilation time, parametrized IO sync frames are (re-)compiled only when changes in the frame function
+    Parameterized version of :class:`IoSyncFrame`, which builds upon a frame function and a frame parameter set.
+    To reduce overall compilation time, parameterized IO sync frames are (re-)compiled only when changes in the frame function
     or the frame parameter set are detected.
     """
     def __init__(self, device_type, trig: int | None = None):

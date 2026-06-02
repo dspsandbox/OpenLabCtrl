@@ -1,6 +1,6 @@
 import numpy as np
 import copy
-from .frame import IoSyncFrame, ParametrizedIoSyncFrame
+from .frame import IoSyncFrame, ParamIoSyncFrame
 from .io.sync import TriggerSource
 from .device.rp_base import Rp_base
 
@@ -42,14 +42,14 @@ class IoSequence():
         Assign a frame to a device in the sequence.
 
         :param frame: :class:`~openlabctrl.frame.IoSyncFrame` or
-            :class:`~openlabctrl.frame.ParametrizedIoSyncFrame` to add.
+            :class:`~openlabctrl.frame.ParamIoSyncFrame` to add.
         :param device: Target device instance. Must be in the sequence device list and
             compatible with the frame's device type.
         :param label: Optional label for the frame. Auto-generated if not provided.
         """
         self._check_sequence_done()
-        if (type(frame) is not IoSyncFrame) and (type(frame) is not ParametrizedIoSyncFrame):
-             raise Exception(f"Frame must be of type IoSyncFrame or ParametrizedIoSyncFrame, got {type(frame)}.")
+        if (type(frame) is not IoSyncFrame) and (type(frame) is not ParamIoSyncFrame):
+             raise Exception(f"Frame must be of type IoSyncFrame or ParamIoSyncFrame, got {type(frame)}.")
         if not issubclass(type(device), Rp_base):
                 raise Exception(f"Provided device attribute is not a valid device instance.")
         if not isinstance(device, frame._device_type) and frame._device_type not in device.COMPATIBLE_DEVICES:

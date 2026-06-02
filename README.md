@@ -12,7 +12,7 @@ Library for Synchronous and Deterministic Control of Red Pitaya's Digital and An
   * Analog in, XADC (x4): acquisition, decimation
 
 * Experimental sequences with:
-   * Independent and parametrizable sub-sequences (*IoSyncFrames*, *ParemetrizedIoSyncFrames*) for modular coding and reduced compilation time
+   * Independent and parameterizable sub-sequences (*IoSyncFrames*, *ParameterizedIoSyncFrames*) for modular coding and reduced compilation time
    * External triggering
    * Multi-device synchronization 
 
@@ -63,7 +63,7 @@ See [Pyhton API Reference](https://dspsandbox.github.io/OpenLabCtrl/) (latest ve
 [02_serial.ipynb](example/02_serial.ipynb) | Examples of UART and SPI transaction via digital IOs
 [03_analog_in_out.ipynb](example/03_analog_in_out.ipynb) | Generation and acquisition of analog ramps via slow analog IOs 
 [04_rf_in_out.ipynb](example/04_rf_in_out.ipynb) | RF synthesis and acquisition via high-speed analog IOs
-[05_param_io_frame.ipynb](example/05_param_io_frame.ipynb) | Parametrizable IO frames and configurable sequences 
+[05_param_io_frame.ipynb](example/05_param_io_frame.ipynb) | Parameterizable IO frames and configurable sequences 
 [06_multi_device_sync.ipynb](example/06_multi_device_sync.ipynb) | Multi-device synchronization and scalability 
 
 

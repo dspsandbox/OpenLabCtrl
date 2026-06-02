@@ -2,7 +2,7 @@ import time
 from pathlib import Path
 import numpy as np
 from zynq_tcp_ctrl import ZynqTcpCtrlClient
-from ..frame import IoSyncFrame, ParametrizedIoSyncFrame
+from ..frame import IoSyncFrame, ParamIoSyncFrame
 from ..dma.dma import DMA
 
 
@@ -84,8 +84,8 @@ class Rp_base():
     
 
     def _add_frame(self, frame, label=None):
-        if (type(frame) is not IoSyncFrame) and (type(frame) is not ParametrizedIoSyncFrame):
-            raise Exception(f"Frame must be of type IoSyncFrame or ParametrizedIoSyncFrame. Got {type(frame)}.")
+        if (type(frame) is not IoSyncFrame) and (type(frame) is not ParamIoSyncFrame):
+            raise Exception(f"Frame must be of type IoSyncFrame or ParamIoSyncFrame. Got {type(frame)}.")
         if label is None:
             label = f"frame_{len(self._frame_dict)}"
         if label in self._frame_dict:
