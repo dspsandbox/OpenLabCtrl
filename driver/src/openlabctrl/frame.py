@@ -12,7 +12,7 @@ class IoSyncFrame:
     At instantiation, an IO instance is created for each entry in
     ``device_type.IO_DICT`` and exposed as an attribute with the same name.
     The exact set of attributes therefore depends on the device type passed
-    (e.g. see RP 125-14 Base :attr:`~redpitaya_io_sync.device.rp_125_14.Rp_125_14.IO_DICT`).
+    (e.g. see RP 125-14 Base :attr:`~openlabctrl.device.rp_125_14.Rp_125_14.IO_DICT`).
 
     :param device_type: Device class (not instance)
     :param trig: Trigger source to initiate frame execution. If ``None`` or ``TriggerSource.NONE``, frame is triggered immediately.
@@ -115,7 +115,7 @@ class IoSyncFrame:
 
     def set_time(self, t : int):
         """
-        Set new time for all IOs of this frame, see :meth:`~redpitaya_io_sync.io.base.BaseIo.set_time`.
+        Set new time for all IOs of this frame, see :meth:`~openlabctrl.io.base.BaseIo.set_time`.
 
         :param t: time (in units of clk cycles). 
         """
@@ -124,7 +124,7 @@ class IoSyncFrame:
 
     def set_time_increment(self, t_incr : int):
         """
-        Set new time increment for all IOs of this frame, see :meth:`~redpitaya_io_sync.io.base.BaseIo.set_time_increment`.
+        Set new time increment for all IOs of this frame, see :meth:`~openlabctrl.io.base.BaseIo.set_time_increment`.
         """ 
         for io in self._io_dict.values():
             io.set_time_increment(t_incr)
@@ -138,7 +138,7 @@ class IoSyncFrame:
 
     def delay(self, val : int):
         """
-        Delay all IOs of this frame, see :meth:`~redpitaya_io_sync.io.base.BaseIo.delay`.
+        Delay all IOs of this frame, see :meth:`~openlabctrl.io.base.BaseIo.delay`.
 
         :param val: Delay time (in units of clk cycles).
         """

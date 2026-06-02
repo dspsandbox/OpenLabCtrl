@@ -3,12 +3,12 @@ IO
 
 `Link`_ to IOs and pin mapping for Red Pitaya 125-14 devices.
 
-.. _Link: https://github.com/dspsandbox/Redpitaya-IO-Sync#ios--pin-mapping
+.. _Link: https://github.com/dspsandbox/openlabctrl#ios--pin-mapping
 
 Base IO
 -------
 
-.. autoclass:: redpitaya_io_sync.io.base.BaseIo
+.. autoclass:: openlabctrl.io.base.BaseIo
    :members:
    :undoc-members:
    :inherited-members:
@@ -17,7 +17,7 @@ Base IO
 Digital
 -------
 
-.. autoclass:: redpitaya_io_sync.io.digital.DigitalIo
+.. autoclass:: openlabctrl.io.digital.DigitalIo
    :members:
    :undoc-members:
    :inherited-members:
@@ -26,7 +26,7 @@ Digital
 Analog
 ------
 
-.. autoclass:: redpitaya_io_sync.io.analog.AnalogOut
+.. autoclass:: openlabctrl.io.analog.AnalogOut
    :members:
    :undoc-members:
    :inherited-members:
@@ -35,13 +35,13 @@ Analog
 RF
 ---
 
-.. autoclass:: redpitaya_io_sync.io.rf.RfBase
+.. autoclass:: openlabctrl.io.rf.RfBase
    :members:
    :undoc-members:
    :inherited-members:
    :show-inheritance:
 
-.. autoclass:: redpitaya_io_sync.io.rf.RfOut
+.. autoclass:: openlabctrl.io.rf.RfOut
    :members:
    :undoc-members:
    :inherited-members:
@@ -50,12 +50,12 @@ RF
 Scope (Digital, Analog, RF acquisition)
 ---------------------------------------
 
-.. autoclass:: redpitaya_io_sync.io.scope.ScopeSource
+.. autoclass:: openlabctrl.io.scope.ScopeSource
    :members:
    :undoc-members:
 
 
-.. autoclass:: redpitaya_io_sync.io.scope.Scope
+.. autoclass:: openlabctrl.io.scope.Scope
    :members:
    :undoc-members:
    :inherited-members:
@@ -64,7 +64,7 @@ Scope (Digital, Analog, RF acquisition)
 LED
 ---
 
-.. autoclass:: redpitaya_io_sync.io.led.Led
+.. autoclass:: openlabctrl.io.led.Led
    :members:
    :undoc-members:
    :inherited-members:

@@ -3,7 +3,7 @@ requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "redpitaya_io_sync"
+name = "openlabctrl"
 version = "1.0.0"
 authors = [
     {name = "Pau Gómez", email = "pau.gomez@dspsandbox.org"},
@@ -19,4 +19,4 @@ package-dir = {"" = "src"}
 where = ["src"]
 
 [tool.setuptools.package-data]
-redpitaya_io_sync = ["bitstream/*.bit"]
+openlabctrl = ["bitstream/*.bit"]

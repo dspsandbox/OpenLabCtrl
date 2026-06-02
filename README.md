@@ -1,4 +1,4 @@
-# Redpitaya-IO-Sync
+# OpenLabCtrl
 Library for Synchronous and Deterministic Control of Red Pitaya's Digital and Analog IOs.
 
 ## Features:
@@ -42,18 +42,18 @@ Please install the Zynq TCP Control library (TCP-based control utilities for ZYN
 ### This Library
 * Clone the Zynq TCP Control repository:
   ```
-  git clone https://github.com/dspsandbox/Redpitaya-IO-Sync/tree/main
+  git clone https://github.com/dspsandbox/openlabctrl/tree/main
   ```
 
 * Navigate to the python lib and install via pip3 (-e for editable install):
     ```
-    cd redpitaya-io-sync
+    cd openlabctrl
     python3 -m pip install --upgrade pip setuptools wheel
     pip3 install -e .
     ```
 
 ## Documentation
-See [Pyhton API Reference](https://dspsandbox.github.io/Redpitaya-IO-Sync/) (latest version).
+See [Pyhton API Reference](https://dspsandbox.github.io/openlabctrl/) (latest version).
 
 ## Examples
 |Notebook | Description|
@@ -72,7 +72,7 @@ See [Pyhton API Reference](https://dspsandbox.github.io/Redpitaya-IO-Sync/) (lat
 ![](https://redpitaya.readthedocs.io/en/latest/_images/Red_Pitaya_pinout.jpg)
 
 
-|IO Name (Redpitaya-IO-Sync library) | Pin Name (see diagram above) | Description|
+|IO Name (OpenLabCtrl library) | Pin Name (see diagram above) | Description|
 |-|-|-|
 led[0-7] | LED_0-7 | User LEDs
 digital_io_0[0] | DIO0_P (trig ext) | Digital IO (3.3V) 

@@ -4,7 +4,7 @@ Frame
 Trigger Source
 --------------
 
-.. autoclass:: redpitaya_io_sync.io.sync.TriggerSource
+.. autoclass:: openlabctrl.io.sync.TriggerSource
    :members:
    :undoc-members:
 
@@ -12,12 +12,12 @@ Trigger Source
 Frame Classes
 -------------
 
-.. autoclass:: redpitaya_io_sync.frame.IoSyncFrame
+.. autoclass:: openlabctrl.frame.IoSyncFrame
    :members:
    :undoc-members:
    :inherited-members:
 
-.. autoclass:: redpitaya_io_sync.frame.ParametrizedIoSyncFrame
+.. autoclass:: openlabctrl.frame.ParametrizedIoSyncFrame
    :members:
    :undoc-members:
    :inherited-members:

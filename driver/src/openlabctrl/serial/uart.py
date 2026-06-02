@@ -4,15 +4,15 @@ from ..io.digital import DigitalIo
 
 class UART:
     """
-    Bit-banged UART transmitter over a :class:`~redpitaya_io_sync.io.digital.DigitalIo` port.
+    Bit-banged UART transmitter over a :class:`~openlabctrl.io.digital.DigitalIo` port.
 
     Transmits standard UART frames (start bit + data bits LSB-first + optional parity + stop bits).
     TX is implemented open-drain: the output register is pre-loaded to ``0`` and the pin is toggled
     between driven-low (tristate=0) and high-Z (tristate=1). The internal pull-up resistors on the
-    :class:`~redpitaya_io_sync.io.digital.DigitalIo` ports keep both TX and RX lines idle-high
+    :class:`~openlabctrl.io.digital.DigitalIo` ports keep both TX and RX lines idle-high
     (mark state) without requiring external pull-ups.
 
-    :param io: :class:`~redpitaya_io_sync.io.digital.DigitalIo` instance used for bit-banging.
+    :param io: :class:`~openlabctrl.io.digital.DigitalIo` instance used for bit-banging.
     :param baud: Baud rate in bits per second. The bit period is derived from the IO clock frequency.
     :param data_len: Number of data bits per frame (default: 8).
     :param stop_len: Number of stop bits per frame (default: 1).

@@ -41,8 +41,8 @@ class IoSequence():
         """
         Assign a frame to a device in the sequence.
 
-        :param frame: :class:`~redpitaya_io_sync.frame.IoSyncFrame` or
-            :class:`~redpitaya_io_sync.frame.ParametrizedIoSyncFrame` to add.
+        :param frame: :class:`~openlabctrl.frame.IoSyncFrame` or
+            :class:`~openlabctrl.frame.ParametrizedIoSyncFrame` to add.
         :param device: Target device instance. Must be in the sequence device list and
             compatible with the frame's device type.
         :param label: Optional label for the frame. Auto-generated if not provided.

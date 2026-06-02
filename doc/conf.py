@@ -236,6 +236,6 @@ intersphinx_mapping = {
 }
 
 html_theme = "furo"
-html_title = f"{project} {release}"
+html_title = f"OpenLabCtrl {release}"
 
 exclude_patterns = ["_build"]

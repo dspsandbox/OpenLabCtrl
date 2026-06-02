@@ -1,7 +1,7 @@
 Sequence
 ========
 
-.. autoclass:: redpitaya_io_sync.sequence.IoSequence
+.. autoclass:: openlabctrl.sequence.IoSequence
    :members:
    :undoc-members:
    :show-inheritance:

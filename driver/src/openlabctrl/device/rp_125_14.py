@@ -81,7 +81,7 @@ class Rp_125_14_Z7010(Rp_125_14):
 
     """
 
-    BITSTREAM = "bitstream/io_sync_rp_125_14_z7010.bit"
+    BITSTREAM = "bitstream/openlabctrl_rp_125_14_z7010.bit"
     
     def __init__(self, ip: str, label: str = "rp_125_14_z7010", daisy_0_en: bool = False, daisy_1_en: bool = False, force: bool = False):
         super().__init__(ip, label, daisy_0_en, daisy_1_en, force)  
@@ -103,7 +103,7 @@ class Rp_125_14_Z7020(Rp_125_14):
     :param force: Force bitstream reloading (resets FPGA configuration)
     """
 
-    BITSTREAM = "bitstream/io_sync_rp_125_14_z7020.bit"
+    BITSTREAM = "bitstream/openlabctrl_rp_125_14_z7020.bit"
 
     def __init__(self, ip: str, label: str = "rp_125_14_z7020", daisy_0_en: bool = False, daisy_1_en: bool = False, force: bool = False):
         super().__init__(ip, label, daisy_0_en, daisy_1_en, force)  

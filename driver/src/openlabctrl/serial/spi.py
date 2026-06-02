@@ -4,14 +4,14 @@ from ..io.digital import DigitalIo
 
 class SPI:
     """
-    Bit-banged SPI master over a :class:`~redpitaya_io_sync.io.digital.DigitalIo` port.
+    Bit-banged SPI master over a :class:`~openlabctrl.io.digital.DigitalIo` port.
 
     Supports all four SPI modes (CPOL × CPHA) and configurable pin assignment via
     single-bit masks. Call :meth:`io_config` once to initialize pin directions and idle
     states, then use :meth:`cs_low`, :meth:`write`, and :meth:`cs_high` to drive a
     transaction.
 
-    :param io: :class:`~redpitaya_io_sync.io.digital.DigitalIo` instance used for bit-banging.
+    :param io: :class:`~openlabctrl.io.digital.DigitalIo` instance used for bit-banging.
     :param clk_div: Clock divider relative to the frame clock. Must be a positive even integer ≥ 2.
         The SPI clock half-period is ``clk_div / 2`` frame clock cycles.
     :param cpol: Clock polarity. ``0`` = idle low, ``1`` = idle high.
