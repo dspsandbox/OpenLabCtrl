@@ -154,7 +154,7 @@ class Rp_base():
         err_code = self._tcp_ctrl_client.read(addr=self.ADDR_DICT["reg_bank_err"])
         done_code = self._tcp_ctrl_client.read(addr=self.ADDR_DICT["reg_bank_done"])
         frame_label_list = list(self._frame_dict.keys())
-        frame_label = frame_label_list[sync_counter - 1] if sync_counter > 0 else None
+        frame_label = frame_label_list[sync_counter - 1] if 0 < sync_counter <= len(frame_label_list) else None
         io_status = {}
         for io_name in self.IO_DICT.keys():
             if io_name[0] != "_":
