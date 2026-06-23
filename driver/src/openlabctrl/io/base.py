@@ -72,7 +72,7 @@ class BaseIo():
         #Create new instruction
         #63 - 60 | 59 - 56 | 55 - 32 | 31 - 0
         #Addr    |   Cmd   |   Time  |   Data
-        instr = ((self._addr << 60) | (cmd << 56) | ((t & 0xffffff) << 32) | data)
+        instr = ((int(self._addr) << 60) | (int(cmd) << 56) | (int(t & 0xffffff) << 32) | data)
         
         #Add instruction to list
         self._instr_list[self._idx] = instr
