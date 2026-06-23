@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: MIT
+# Author: Pau Gómez (2026)
+# OpenLabCtrl - FPGA-timed experiment control on Red Pitaya STEMlab 125-14
+
 proc create_ipi_design { offsetfile design_name } {
 	create_bd_design $design_name
 	open_bd_design $design_name

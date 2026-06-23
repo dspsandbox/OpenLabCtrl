@@ -1,3 +1,7 @@
+// SPDX-License-Identifier: MIT
+// Author: Pau Gómez (2026)
+// OpenLabCtrl - FPGA-timed experiment control on Red Pitaya STEMlab 125-14
+
 module xadc_input_routing (
     input [3 : 0] vinn_i,
     input [3 : 0] vinp_i,

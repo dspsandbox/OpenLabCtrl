@@ -1,3 +1,7 @@
+// SPDX-License-Identifier: MIT
+// Author: Pau Gómez (2026)
+// OpenLabCtrl - FPGA-timed experiment control on Red Pitaya STEMlab 125-14
+
 module led #(
     parameter LED_WIDTH = 8,
     localparam INSTR_CMD_WIDTH = 4,

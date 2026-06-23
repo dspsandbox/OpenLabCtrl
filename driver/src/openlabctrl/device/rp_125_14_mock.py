@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: MIT
+# Author: Pau Gómez (2026)
+# OpenLabCtrl - FPGA-timed experiment control on Red Pitaya STEMlab 125-14
+
 import numpy as np
 from .rp_125_14 import Rp_125_14_Z7010
 

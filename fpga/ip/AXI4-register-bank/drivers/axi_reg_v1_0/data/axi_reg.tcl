@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Author: Pau Gómez (2026)
+# OpenLabCtrl - FPGA-timed experiment control on Red Pitaya STEMlab 125-14
 
 
 proc generate {drv_handle} {

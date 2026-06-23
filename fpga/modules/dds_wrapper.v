@@ -1,3 +1,7 @@
+// SPDX-License-Identifier: MIT
+// Author: Pau Gómez (2026)
+// OpenLabCtrl - FPGA-timed experiment control on Red Pitaya STEMlab 125-14
+
 module dds_wrapper( 
     input clk,
     input [31 : 0] phase_off,

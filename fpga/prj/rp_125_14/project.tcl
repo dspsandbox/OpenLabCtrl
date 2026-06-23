@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: MIT
+# Author: Pau Gómez (2026)
+# OpenLabCtrl - FPGA-timed experiment control on Red Pitaya STEMlab 125-14
+
 set _xil_proj_dir_name_ openlabctrl_rp_125_14 
 set i 0 
 while {[file exist ${_xil_proj_dir_name_}]} {

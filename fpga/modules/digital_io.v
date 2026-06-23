@@ -1,3 +1,7 @@
+// SPDX-License-Identifier: MIT
+// Author: Pau Gómez (2026)
+// OpenLabCtrl - FPGA-timed experiment control on Red Pitaya STEMlab 125-14
+
 module digital_io #(
     parameter IO_WIDTH = 4,
     localparam INSTR_CMD_WIDTH = 4,

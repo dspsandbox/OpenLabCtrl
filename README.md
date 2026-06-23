@@ -1,5 +1,5 @@
 # OpenLabCtrl
-Library for Synchronous and Deterministic Control of Red Pitaya's Digital and Analog IOs.
+Experiment control library with FPGA-timed execution on Red Pitaya STEMlab 125-14 digital and analog IOs.
 
 ## Features:
 * Real-time control (8ns resolution) of:

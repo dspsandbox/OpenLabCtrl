@@ -1,3 +1,7 @@
+// SPDX-License-Identifier: MIT
+// Author: Pau Gómez (2026)
+// OpenLabCtrl - FPGA-timed experiment control on Red Pitaya STEMlab 125-14
+
 module instr_mux #(
     localparam INSTR_WIDTH = 64,
     localparam INSTR_ADDR_LSB = 60,

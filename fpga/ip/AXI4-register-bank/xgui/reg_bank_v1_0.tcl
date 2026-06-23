@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Author: Pau Gómez (2026)
+# OpenLabCtrl - FPGA-timed experiment control on Red Pitaya STEMlab 125-14
 
 # Loading additional proc with user specified bodies to compute parameter values.
 source [file join [file dirname [file dirname [info script]]] gui/axi_reg_v1_0.gtcl]
