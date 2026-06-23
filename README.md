@@ -1,5 +1,5 @@
 # OpenLabCtrl
-Experiment control library with FPGA-timed execution on Red Pitaya STEMlab 125-14 digital and analog IOs.
+Open source library for FPGA-timed laboratory/experiment control on Red Pitaya STEMlab 125-14 devices.
 
 ## Features:
 * Real-time control (8ns resolution) of:
