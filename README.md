@@ -53,7 +53,8 @@ Please install the Zynq TCP Control library (TCP-based control utilities for ZYN
     ```
 
 ## Documentation
-See [Pyhton API Reference](https://dspsandbox.github.io/OpenLabCtrl/) (latest version).
+* High level introduction, [Red Pitaya blog]([https://lnkd.in/d7WBZ__d](https://content.redpitaya.com/blog/democratizing-quantum-experiment-control-with-openlabctrl))
+* [Pyhton API Reference](https://dspsandbox.github.io/OpenLabCtrl/) (latest version).
 
 ## Examples
 |Notebook | Description|
