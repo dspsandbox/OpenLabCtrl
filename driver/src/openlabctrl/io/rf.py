@@ -12,6 +12,7 @@ class RfCmd(Enum):
     PHASE_RST = 0x1
     FREQ = 0x2
     AMPL = 0x3
+    OFFSET = 0x4
     UPDATE = 0x8
     
 
@@ -46,6 +47,8 @@ class RfBase(BaseIo):
         if update:
             cmd |= RfCmd.UPDATE.value
         data = int(val / self._clk_freq * ((1 << 32) - 1))
+        if data < 0: 
+            data += (1 << 32)
         self._add_instruction(cmd=cmd, data=data)
 
     def phase(self, val: float, update: bool = True):
@@ -78,6 +81,32 @@ class RfBase(BaseIo):
         if update:
             cmd |= RfCmd.UPDATE.value
         data = int(val * ((1 << 15) - 1))
+        if data < 0: 
+            data += (1 << 16)
+        self._add_instruction(cmd=cmd, data=data)
+
+    def offset(self, val: float, update: bool = True):
+        """
+        Set the output offset.
+
+        .. warning::
+            If ``val`` is non-zero, the output signal may overflow depending on
+            the amplitude setting.
+
+        :param val: Relative offset in range ``[-1, 1]``.
+        :param update: If ``True``, apply the new value immediately. Set to ``False`` to stage
+            the change and apply it later with other staged parameters.
+        """
+        OFFSET_MIN = -1
+        OFFSET_MAX = 1
+        if (val < OFFSET_MIN) or (val > OFFSET_MAX):
+            raise Exception(f"Offset value {val} is out of range [{OFFSET_MIN}, {OFFSET_MAX}].")
+        cmd = RfCmd.OFFSET.value
+        if update:
+            cmd |= RfCmd.UPDATE.value
+        data = int(val * ((1 << 15) - 1))
+        if data < 0: 
+            data += (1 << 32)
         self._add_instruction(cmd=cmd, data=data)
 
     def phase_reset(self, update: bool = True):

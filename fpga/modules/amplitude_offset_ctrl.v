@@ -2,12 +2,13 @@
 // Author: Pau Gómez (2026)
 // OpenLabCtrl - FPGA-timed experiment control on Red Pitaya STEMlab 125-14
 
-module amplitude_ctrl #(
+module amplitude_offset_ctrl #(
     parameter DATA_WIDTH = 16
 )(
     input clk,
     input resetn,
     input signed [DATA_WIDTH - 1 : 0] amplitude,
+    input signed [DATA_WIDTH - 1 : 0] offset,
     input signed [DATA_WIDTH - 1 : 0] data_i_tdata,
     input data_i_tvalid,
     output signed [DATA_WIDTH - 1 : 0] data_o_tdata,
@@ -25,6 +26,6 @@ module amplitude_ctrl #(
         end
     end
 
-    assign data_o_tdata = mult_reg[2 * DATA_WIDTH - 2 : DATA_WIDTH - 1];
+    assign data_o_tdata = $signed(mult_reg[2 * DATA_WIDTH - 2 : DATA_WIDTH - 1]) + offset;
 
 endmodule

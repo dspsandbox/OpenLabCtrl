@@ -58,21 +58,25 @@ class SPI:
         """
         Assert chip select (drive CS low) and wait.
 
-        :param wait: Number of half-clock periods to wait after asserting CS
+        :param wait: Number of half-clock periods to wait before & after asserting CS
             (actual delay = ``clk_div * wait`` frame clock cycles).
+
         """
+        self._io.delay(self._clk_div * wait)
         self._io.output(val=0, mask=self._cs_mask)
         self._io.delay(self._clk_div * wait)
+        
 
     def cs_high(self, wait: int = 1):
         """
         Deassert chip select (drive CS high) after a settling delay.
 
-        :param wait: Number of half-clock periods to wait before deasserting CS
+        :param wait: Number of half-clock periods to wait before & after deasserting CS
             (actual delay = ``clk_div * wait`` frame clock cycles).
         """
         self._io.delay(self._clk_div * wait)
         self._io.output(val=self._cs_mask, mask=self._cs_mask)
+        self._io.delay(self._clk_div * wait)
 
     def write(self, data: int, size: int):
         """

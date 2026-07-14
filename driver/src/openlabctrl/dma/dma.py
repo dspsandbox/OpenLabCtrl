@@ -24,13 +24,11 @@ class _SDMAChannel:
         self.transferred = 0
         self.start()
 
-    @property
-    def running(self):
+    def is_running(self):
         """True if the DMA engine is currently running"""
         return self._tcp_ctrl_client.read(self._offset + 4) & 0x01 == 0x00
 
-    @property
-    def idle(self):
+    def is_idle(self):
         """True if the DMA engine is idle
 
         `transfer` can only be called when the DMA is idle
@@ -38,15 +36,14 @@ class _SDMAChannel:
         """
         return self._tcp_ctrl_client.read(self._offset + 4) & 0x02 == 0x02
 
-    @property
-    def error(self):
+    def is_error(self):
         """True if DMA engine is in an error state"""
         return self._tcp_ctrl_client.read(self._offset + 4) & 0x70 != 0x0
 
     def start(self):
         """Start the DMA engine if stopped"""
         self._tcp_ctrl_client.write(self._offset, 0x0001)
-        while not self.running:
+        while not self.is_running():
             pass
         self._first_transfer = True
 
@@ -54,14 +51,14 @@ class _SDMAChannel:
         """Stops the DMA channel and aborts the current transfer"""
         self._tcp_ctrl_client.write(self._offset, 0x0004)
         self._tcp_ctrl_client.write(self._offset, 0x0000)
-        while self.running:
+        while self.is_running():
             pass
 
     def transfer(self, addr_start, nbytes):
         """Start a DMA transfer from/to the given physical address with the given number of bytes"""
-        if not self.running:
+        if not self.is_running():
             raise RuntimeError("DMA channel not started")
-        if not self.idle and not self._first_transfer:
+        if not self.is_idle() and not self._first_transfer:
             raise RuntimeError("DMA channel not idle")
 
        
@@ -77,11 +74,11 @@ class _SDMAChannel:
 
     def delay(self):
         """Wait for the transfer to complete"""
-        if not self.running:
+        if not self.is_running():
             raise RuntimeError("DMA channel not started")
         while True:
             error = self._tcp_ctrl_client.read(self._offset + 4)
-            if self.error:
+            if self.is_error():
                 if error & 0x10:
                     raise RuntimeError("DMA Internal Error (transfer length 0?)")
                 if error & 0x20:
@@ -90,7 +87,7 @@ class _SDMAChannel:
                     )
                 if error & 0x40:
                     raise RuntimeError("DMA Decode Error (invalid address)")
-            if self.idle:
+            if self.is_idle():
                 break
         self.transferred = self._tcp_ctrl_client.read(self._offset + 0x28)
 

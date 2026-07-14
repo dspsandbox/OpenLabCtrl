@@ -49,11 +49,6 @@ class BaseIo():
         if self._locked:
             raise Exception("Cannot add instruction because the instruction list is locked. Please reset instruction list.")
         
-        #Map to uint64
-        cmd = np.uint64(cmd)
-        data = np.uint64(data)
-        duration = np.uint64(duration)
-
         #Assign time for instruction
         t = self._tnext
         
