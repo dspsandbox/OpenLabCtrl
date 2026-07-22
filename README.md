@@ -1,3 +1,6 @@
+>[!WARNING]
+>This repository has been archived. Please navigate to [RedPitaya/OpenLabCtrl](https://github.com/RedPitaya/OpenLabCtrl).
+
 # OpenLabCtrl
 Open source library for FPGA-timed laboratory/experiment control on Red Pitaya STEMlab 125-14 devices.
 
